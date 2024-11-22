@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Residente</title>
+    <link rel="stylesheet" href="perfilcss.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <img class="rounded-circle mt-5" width="150px" src="/img/fotoanciano.jpg">
+                    <span class="font-weight-bold">Nombre del Residente</span>
+                    
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Información del Residente</h4>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">Nombre</label><input type="text" class="form-control" placeholder="Nombre" value=""></div>
+                        <div class="col-md-6"><label class="labels">Apellido</label><input type="text" class="form-control" placeholder="Apellido" value=""></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6"><label class="labels">Edad</label><input type="number" class="form-control" placeholder="Edad" value=""></div>
+                        <div class="col-md-6"><label class="labels">Género</label>
+                            <select class="form-control">
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Enfermedades o Condiciones Médicas</label><input type="text" class="form-control" placeholder="Describa las condiciones médicas" value=""></div>
+                        <div class="col-md-12"><label class="labels">Alergias</label><input type="text" class="form-control" placeholder="Lista de alergias" value=""></div>
+                        <div class="col-md-12"><label class="labels">Medicamentos</label><input type="text" class="form-control" placeholder="Medicamentos actuales" value=""></div>
+                        <div class="col-md-12"><label class="labels">Contacto de Emergencia</label><input type="text" class="form-control" placeholder="Nombre y teléfono del contacto" value=""></div>
+                    </div>
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Guardar Información</button></div>
+                </div>
+            </div>
+        </div>
+        <!-- Ver Perfil -->
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Perfil del Residente</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Nombre: </strong>Nombre del Residente</p>
+                        <p><strong>Edad: </strong>80 años</p>
+                        <p><strong>Género: </strong>Masculino</p>
+                        <p><strong>Enfermedades: </strong>Diabetes, hipertensión</p>
+                        <p><strong>Alergias: </strong>Penicilina</p>
+                        <p><strong>Medicamentos: </strong>Insulina</p>
+                        <p><strong>Contacto de Emergencia: </strong>Juan Pérez, +56 9 1234 5678</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

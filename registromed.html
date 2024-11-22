@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Médico</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/inicio.html">
+        <img src="" alt="" class="me-2">
+        <span>DIOXXX</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Contenido Principal -->
+  <div class="container mt-4">
+    <h1 class="text-center mb-4">Registro Médico</h1>
+
+    <!-- Foto del Paciente -->
+    <div class="text-center mb-4">
+      <img src="/img/fotoanciano.jpg" alt="Foto del Paciente" class="rounded-circle">
+    </div>
+
+    <!-- Horas de Administración -->
+    <h4>Horas de Administración de Medicamentos</h4>
+    <table class="table table-bordered">
+      <thead class="table-primary">
+        <tr>
+          <th>Medicamento</th>
+          <th>Hora de Administración</th>
+          <th>Observaciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Paracetamol</td>
+          <td>08:00 AM</td>
+          <td>Para fiebre</td>
+        </tr>
+        <tr>
+          <td>Ibuprofeno</td>
+          <td>02:00 PM</td>
+          <td>Para dolor muscular</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Historial de Emergencias Médicas -->
+    <h4>Historial de Emergencias Médicas</h4>
+    <button class="btn btn-danger" id="emergencia-btn">Emergencia</button>
+
+    <!-- Botón Emergencia -->
+    <div class="mt-4">
+      <h5>Emergencias Anteriores</h5>
+      <ul>
+        <li>Accidente en 15/08/2023: Fractura de pierna</li>
+        <li>Desmayo en 05/06/2022: Causa desconocida</li>
+      </ul>
+    </div>
+
+    <!-- Historial Médico -->
+    <h4>Historial Médico</h4>
+    <table class="table table-bordered">
+      <thead class="table-primary">
+        <tr>
+          <th>Fecha</th>
+          <th>Profesional</th>
+          <th>Diagnóstico</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12/02/2023</td>
+          <td>Dr. Juan Pérez</td>
+          <td>Hipertensión</td>
+        </tr>
+        <tr>
+          <td>20/07/2022</td>
+          <td>Dr. María González</td>
+          <td>Gripe</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Botón Guardar Información -->
+    <div class="text-center mt-4">
+      <button class="btn btn-success" id="guardar-btn">Guardar Información</button>
+    </div>
+  </div>
+
+  <!-- Modal Popup de Emergencia -->
+  <div class="modal fade" id="emergenciaModal" tabindex="-1" aria-labelledby="emergenciaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="emergenciaModalLabel">Emergencia Enviada</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          La emergencia ha sido enviada correctamente.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Popup de Error al Guardar Información -->
+  <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="errorModalLabel">Error</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          No ha sido posible guardar la información.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Mostrar modal de Emergencia
+    document.getElementById('emergencia-btn').addEventListener('click', function() {
+      const emergenciaModal = new bootstrap.Modal(document.getElementById('emergenciaModal'));
+      emergenciaModal.show();
+    });
+
+    // Mostrar modal de Error al Guardar Información
+    document.getElementById('guardar-btn').addEventListener('click', function() {
+      const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+      errorModal.show();
+    });
+  </script>
+  
+</body>
+</html>
